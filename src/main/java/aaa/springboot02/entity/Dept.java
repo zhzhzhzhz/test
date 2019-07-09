@@ -3,6 +3,7 @@ package aaa.springboot02.entity;
 public class Dept {
     private Integer deptno;
     private String dname;
+    private String dsal;
 
     public Integer getDeptno() {
         return deptno;
