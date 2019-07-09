@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="saveEmp" method="post">
+        <table>
+            <tr >
+                <td><input type="hidden" name="empno"/></td>
+            </tr>
+
+            <tr>
+                <td>员工姓名</td>
+                <td><input type="text" name="ename"/></td>
+            </tr>
+            <tr>
+                <td>工作职位</td>
+                <td><input type="text" name="job"/></td>
+            </tr>
+            <tr>
+                <td>上级领导</td>
+                <td><input type="text" name="mgr"/></td>
+            </tr>
+            <tr>
+                <td>入职日期</td>
+                <td><input type="date" name="hiredate"/></td>
+            </tr>
+            <tr>
+                <td>基本工资</td>
+                <td><input type="text" name="sal"/></td>
+            </tr>
+            <tr>
+                <td>奖金</td>
+                <td><input type="text" name="comm" /></td>
+            </tr>
+            <tr>
+                <td>部门编号</td>
+                <td><input type="text" name="deptno"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="提交"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

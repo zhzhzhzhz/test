@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+            <td colspan="4">
+                <a th:href="@{addEmp}">添加</a>
+            </td>
+        </tr>
+        <tr>
+            <th>员工编号</th>
+            <th>员工姓名</th>
+            <th>工作职位</th>
+            <th>上级领导</th>
+            <th>入职日期</th>
+            <th>基本工资</th>
+            <th>奖金</th>
+            <th>部门编号</th>
+            <th colspan="2">操作</th>
+        </tr>
+        <tr th:each="item:${empsList}">
+            <td th:text="${item.getEmpno()}"></td>
+            <td th:text="${item.getEname()}"></td>
+            <td th:text="${item.getJob()}"></td>
+            <td th:text="${item.getMgr()}"></td>
+            <td th:text="${#dates.format(item.getHiredate(),'yyyy-MM-dd')}"></td>
+            <td th:text="${item.getSal()}"></td>
+            <td th:text="${item.getComm()}"></td>
+            <td th:text="${item.getDeptno()}"></td>
+            <td><a  th:href="@{'editEmp?empno='+${item.empno}}">编辑</a></td>
+            <td><a  th:href="@{'deleteEmp?empno='+${item.empno}}">删除</a></td>
+        </tr>
+    </table>
+</body>
+</html>

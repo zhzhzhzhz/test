@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="updateEmp" method="post">
+        <table>
+            <tr >
+                <td><input type="hidden" name="empno" th:value="${byIdList.empno}"/></td>
+            </tr>
+
+            <tr>
+                <td>员工姓名</td>
+                <td><input type="text" name="ename" th:value="${byIdList.ename}"/></td>
+            </tr>
+            <tr>
+                <td>工作职位</td>
+                <td><input type="text" name="job" th:value="${byIdList.job}"/></td>
+            </tr>
+            <tr>
+                <td>上级领导</td>
+                <td><input type="text" name="mgr" th:value="${byIdList.mgr}"/></td>
+            </tr>
+            <tr>
+                <td>入职日期</td>
+                <td><input type="date" name="hiredate" th:value="${#dates.format(byIdList.hiredate,'yyyy-MM-dd')}"/></td>
+            </tr>
+            <tr>
+                <td>基本工资</td>
+                <td><input type="text" name="sal" th:value="${byIdList.sal}"/></td>
+            </tr>
+            <tr>
+                <td>奖金</td>
+                <td><input type="text" name="comm" th:value="${byIdList.comm}"/></td>
+            </tr>
+            <tr>
+                <td>部门编号</td>
+                <td><input type="text" name="deptno" th:value="${byIdList.deptno}"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="提交"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
