@@ -4,6 +4,7 @@ public class Dept {
     private Integer deptno;
     private String dname;
     private String dcomm;
+    private String dsal;
 
     public Integer getDeptno() {
         return deptno;
